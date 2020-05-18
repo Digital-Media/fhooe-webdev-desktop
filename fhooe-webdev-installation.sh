@@ -162,7 +162,7 @@ sudo bash -c "echo 'xrandr --addmode Virtual1 1920x1080_60.00' >> $XRANDR"
 sudo bash -c "echo 'xrandr --output Virtual1 --mode 1920x1080_60.00' >> $XRANDR"
 sudo chmod +x /etc/X11/Xsession.d/45custom_xrandr-settings
 
-echo "## Start jetbrains-toolbox from commandline or per click from Anwendungen ##"
-echo "## Add Terminal, Texteditor, Jetbrains-Toolbox and Chrome to favorites ##"
-echo "## bookmark phpintro, onlineshop, phpmyadmin, elearning, github, jetbrains bookmarklets ##"
-echo "## reboot your system ##"
+echo "## reboot your system and finish installation with the steps below ##"
+echo "## Start jetbrains-toolbox from commandline or per click from Anwendungen and install PHPStorm ##"
+echo "## Add Terminal, Texteditor, Jetbrains-Toolbox, PHPStorm and Chrome to favorites ##"
+echo "## bookmark phpintro, onlineshop, phpmyadmin, elearning, github, jetbrains bookmarklets Chrome ##"
