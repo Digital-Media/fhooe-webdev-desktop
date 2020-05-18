@@ -150,9 +150,19 @@ git clone https://github.com/Digital-Media/phpintro.git phpintro
 cd phpintro
 composer install
 
-# sudo service apache2 restart
-## sudo systemctl restart apache2.service
+echo "## permanently set Screen Resolution to 1920x1080 60 to optimize YouTube streaming ##"
+# Get parameters for xrandr
+# cvt 1920 1080 60
+# Get name of connected Screen.
+# xrandr
+
+XRANDR=/etc/X11/Xsession.d/45custom_xrandr-settings
+sudo bash -c "echo 'xrandr --newmode 1920x1080_60.00  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync' >> $XRANDR"
+sudo bash -c "echo 'xrandr --addmode Virtual1 1920x1080_60.00' >> $XRANDR"
+sudo bash -c "echo 'xrandr --output Virtual1 --mode 1920x1080_60.00' >> $XRANDR"
+sudo chmod +x /etc/X11/Xsession.d/45custom_xrandr-settings
 
 echo "## Start jetbrains-toolbox from commandline or per click from Anwendungen ##"
 echo "## Add Terminal, Texteditor, Jetbrains-Toolbox and Chrome to favorites ##"
 echo "## bookmark phpintro, onlineshop, phpmyadmin, elearning, github, jetbrains bookmarklets ##"
+echo "## reboot your system ##"
