@@ -151,8 +151,9 @@ cd ..
 git clone https://github.com/Digital-Media/phpintro.git phpintro
 cd phpintro
 composer install
-cd ..
-sudo chmod -R 777 code
+cd ../onlineshop/src
+sudo mysql -uonlineshop -pgeheim < onlineshop.sql
+#sudo chmod -R 777 code
 
 echo "## permanently set Screen Resolution to 1920x1080 60 to optimize YouTube streaming ##"
 # Get parameters for xrandr
