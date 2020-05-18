@@ -142,13 +142,17 @@ echo "## installing onlineshop und phpintro ##"
 
 cd /var/www/html
 sudo mkdir code
+sudo chmod 777 code
 cd code
 git clone https://github.com/Digital-Media/onlineshop.git onlineshop
 cd onlineshop
 composer install
+cd ..
 git clone https://github.com/Digital-Media/phpintro.git phpintro
 cd phpintro
 composer install
+cd ..
+sudo chmod -R 777 code
 
 echo "## permanently set Screen Resolution to 1920x1080 60 to optimize YouTube streaming ##"
 # Get parameters for xrandr
