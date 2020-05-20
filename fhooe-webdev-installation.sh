@@ -85,6 +85,7 @@ sudo apt-get -y update
 sudo apt-get -y -qq install mariadb-server mariadb-client
 sudo mysql -uroot -pgeheim -e "CREATE USER 'onlineshop'@'localhost' IDENTIFIED BY 'geheim'"
 sudo mysql -uroot -pgeheim -e "GRANT ALL PRIVILEGES ON *.* TO 'onlineshop'@'localhost'"
+## all passwords are set to "geheim"
 sudo apt-get -y -qq install phpmyadmin
 
 echo "################################################"
