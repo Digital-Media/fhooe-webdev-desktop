@@ -12,7 +12,7 @@ sudo apt-get install elasticsearch
 # sudo vi /etc/elasticsearch/elasticsearch.yml
 
 # configuring elasticsearch only for localhost.
-# https://www.elastic.co/guide/en/elasticsearch/reference/7.0/breaking-changes-7.0.html#breaking_70_discovery_changes
+# https://www.elastic.co/guide/en/elasticsearch/reference/7.7/breaking-changes-7.7.html#breaking_77_discovery_changes
 # network.host: localhost
 # cluster.name: myShopCluster1
 # node.name: "myShopNode1"
