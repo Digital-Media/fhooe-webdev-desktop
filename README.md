@@ -13,7 +13,7 @@ For Troubleshooting and Basics of Virtualisation see [Vagrant Installation](http
 * Start virtual machine
 * Login with Ubuntu/geheim
 
-# use with Virtual Box
+# usage with Virtual Box
 
 * Download ZIP file
 * unzip to Virtual Machines directory
