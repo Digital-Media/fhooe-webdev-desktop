@@ -20,8 +20,8 @@ sudo apt-get install elasticsearch
 # https://www.elastic.co/guide/en/elasticsearch/reference/current/important-settings.html
 
 sudo /bin/systemctl enable elasticsearch.service
-
-# sudo systemctl start elasticsearch.service
+echo "## starting elasticsearch - that can take a while ##"
+sudo systemctl start elasticsearch.service
 # sudo systemctl stop elasticsearch.service
-
+echo "## testing connection ##"
 curl -X GET http://localhost:9200
