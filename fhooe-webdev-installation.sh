@@ -1,14 +1,9 @@
+#!/bin/bash
 # Installation has been done on Ubuntu 20.04 LTS (Focal Fossa) Desktop
-# sudo apt-get install software-properties-common
-# sudo bash funktioniert. Ganzes Script als root laufen lassen?
-# sudo bash 
-# Repos for
-# PHP 7.4
+# Repos for PHP 7.4
 sudo add-apt-repository -y ppa:ondrej/php
 # Apache2
 sudo add-apt-repository -y ppa:ondrej/apache2
-# Redis Server
-sudo add-apt-repository -y ppa:chris-lea/redis-server
 sudo apt-get -y update
 
 echo "#############################################"
@@ -169,6 +164,10 @@ sudo bash -c "echo 'xrandr --newmode 1920x1080_60.00  173.00  1920 2048 2248 257
 sudo bash -c "echo 'xrandr --addmode Virtual1 1920x1080_60.00' >> $XRANDR"
 sudo bash -c "echo 'xrandr --output Virtual1 --mode 1920x1080_60.00' >> $XRANDR"
 sudo chmod +x /etc/X11/Xsession.d/45custom_xrandr-settings
+
+echo "## adding empty document for Nautilus to Vorlagen ##"
+cd $HOME/Vorlagen
+touch "Leeres Document"
 
 echo "## reboot your system and finish installation with the steps below ##"
 echo "## Start jetbrains-toolbox from commandline or per click from Anwendungen and install PHPStorm ##"
