@@ -13,15 +13,22 @@ sudo apt-get install elasticsearch
 # configuring elasticsearch for localhost only.
 # https://www.elastic.co/guide/en/elasticsearch/reference/current/important-settings.html
 # https://www.elastic.co/guide/en/elasticsearch/reference/7.7/breaking-changes-7.7.html#breaking_77_discovery_changes
+# if your hardware does support more cpus, cores and memory you might want to upgrade from default virtual machine settings.
+# 2 or more cores,  4 to 8GB memory
 # sudo vi /etc/elasticsearch/elasticsearch.yml
 # network.host: localhost
 # cluster.name: myShopCluster1
 # node.name: "myShopNode1"
 
-
 sudo /bin/systemctl enable elasticsearch.service
+sudo bash -c "echo 'sudo systemctl start elasticsearch.service' >> /usr/local/bin/StartElasticSearch.sh"
+sudo bash -c "echo 'xsudo systemctl stop elasticsearch.service' >> /usr/local/bin/StopElasticSearch.sh"
+sudo chmod a+x /usr/local/bin/*ElasticSearch.sh
+echo "## starting JRE and elasticsearch - that can take a while ##"
+sudo systemctl start elasticsearch.service
+echo "## testing connection ##"
+curl -X GET http://localhost:9200
 echo "## starting elasticsearch - that can take a while ##"
 sudo systemctl start elasticsearch.service
-# sudo systemctl stop elasticsearch.service
 echo "## testing connection ##"
 curl -X GET http://localhost:9200
