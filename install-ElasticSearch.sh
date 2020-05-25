@@ -28,7 +28,3 @@ echo "## starting JRE and elasticsearch - that can take a while ##"
 sudo systemctl start elasticsearch.service
 echo "## testing connection ##"
 curl -X GET http://localhost:9200
-echo "## starting elasticsearch - that can take a while ##"
-sudo systemctl start elasticsearch.service
-echo "## testing connection ##"
-curl -X GET http://localhost:9200
