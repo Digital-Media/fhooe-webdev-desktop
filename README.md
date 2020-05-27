@@ -20,3 +20,4 @@ For Troubleshooting and Basics of Virtualisation see [Vagrant Installation](http
 * Start Virtual Box
 * Machine - New - Create with existing VMDK-File - create
 * Start virtual machine
+* Login with Ubuntu/geheim
