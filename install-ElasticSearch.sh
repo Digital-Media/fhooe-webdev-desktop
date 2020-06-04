@@ -22,8 +22,18 @@ sudo apt-get install elasticsearch
 
 sudo /bin/systemctl enable elasticsearch.service
 sudo bash -c "echo 'sudo systemctl start elasticsearch.service' >> /usr/local/bin/StartElasticSearch.sh"
-sudo bash -c "echo 'xsudo systemctl stop elasticsearch.service' >> /usr/local/bin/StopElasticSearch.sh"
+sudo bash -c "echo 'sudo systemctl stop elasticsearch.service' >> /usr/local/bin/StopElasticSearch.sh"
 sudo chmod a+x /usr/local/bin/*ElasticSearch.sh
+echo "## cloning and installing german dictionary ##'
+cd $HOME/Downloads
+git clone https://github.com/uschindler/german-decompounder.git
+cd /usr/share/elasticsearch
+sudo mkdir config
+cd config 
+sudo mkdir analysis
+cd analysis
+sudo cp $HOME/Downloads/german-decompounder/de_DR.xml .
+sudo cp $HOME/Downloads/german-decompounder/dictionary-de.txt .
 echo "## starting JRE and elasticsearch - that can take a while ##"
 sudo systemctl start elasticsearch.service
 echo "## testing connection ##"
