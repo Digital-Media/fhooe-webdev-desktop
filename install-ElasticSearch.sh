@@ -27,13 +27,9 @@ sudo chmod a+x /usr/local/bin/*ElasticSearch.sh
 echo "## cloning and installing german dictionary ##'
 cd $HOME/Downloads
 git clone https://github.com/uschindler/german-decompounder.git
-cd /usr/share/elasticsearch
-sudo mkdir config
-cd config 
-sudo mkdir analysis
-cd analysis
-sudo cp $HOME/Downloads/german-decompounder/de_DR.xml .
-sudo cp $HOME/Downloads/german-decompounder/dictionary-de.txt .
+sudo mkdir /etc/elasticsearch/analysis
+sudo cp $HOME/Downloads/german-decompounder/de_DR.xml /etc/elasticsearch/analysis
+sudo cp $HOME/Downloads/german-decompounder/dictionary-de.txt /etc/elasticsearch/analysis
 echo "## starting JRE and elasticsearch - that can take a while ##"
 sudo systemctl start elasticsearch.service
 echo "## testing connection ##"
