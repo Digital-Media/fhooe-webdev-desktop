@@ -8,7 +8,7 @@ sudo curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key
 sudo sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
 sudo apt-get -y -qq install pgadmin4-desktop
 
-sudo su - postgres -c "psql -c \"alter user postgres with password 'geheim'\""
+sudo su - postgres -c "psql -c \"ALTER USER postgres WITH ENCRYPTED PASSWORD 'geheim'\""
 sudo su - postgres -c "psql -c \"CREATE DATABASE onlineshop\""
 sudo su - postgres -c "psql -c \"CREATE USER onlineshop WITH ENCRYPTED PASSWORD 'geheim'\""
 sudo su - postgres -c "psql -c \"GRANT ALL PRIVILEGES ON DATABASE onlineshop to onlineshop\""
