@@ -13,6 +13,9 @@ sudo su - postgres -c "psql -c \"CREATE DATABASE onlineshop\""
 sudo su - postgres -c "psql -c \"CREATE USER onlineshop WITH ENCRYPTED PASSWORD 'geheim'\""
 sudo su - postgres -c "psql -c \"GRANT ALL PRIVILEGES ON DATABASE onlineshop to onlineshop\""
 
+sudo apt-get -y -qq install php-pgsql
+sudo systemctl restart apache2
+
 # systemctl status postgresql.service
 # systemctl status postgresql@12-main.service
 # systemctl is-enabled postgresql
