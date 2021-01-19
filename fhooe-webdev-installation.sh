@@ -11,7 +11,7 @@ echo "## Installing Apache2, PHP7.4 + Extensions ##"
 echo "#############################################"
 
 sudo apt-get -y install apache2 php7.4 libapache2-mod-php7.4
-sudo apt-get -y install php7.4-zip php7.4-mysql php7.4-curl php7.4-dev php7.4-gd php7.4-intl php-pear php-imagick php7.4-imap php7.4-tidy php7.4-xmlrpc php7.4-xsl php7.4-mbstring php7.4-xml php-gettext php-xdebug
+sudo apt-get -y install php7.4-zip php7.4-mysql php7.4-curl php7.4-dev php7.4-gd php7.4-intl php-pear php-imagick php7.4-imap php7.4-tidy php7.4-xmlrpc php7.4-xsl php7.4-mbstring php7.4-xml php-xdebug
 
 echo "## Installing zip, unzip, curl, net-tools ##"
 
