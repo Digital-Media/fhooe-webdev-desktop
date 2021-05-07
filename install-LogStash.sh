@@ -32,7 +32,4 @@ sudo -u logstash /usr/share/logstash/bin/logstash --path.settings /etc/logstash 
 # Config Validation Result: OK. Exiting Logstash
 sudo apt-get install libpostgresql-jdbc-java
 # workarounds due to bugs
-# sudo cp /usr/share/java/postgresql.jar /usr/share/logstash/logstash-core/lib/jars
-# sudo touch /usr/share/logstash/.logstash_jdbc_last_run
-sudo chown logstash:logstash /usr/share/logstash/.logstash_jdbc_last_run
-
+sudo cp /usr/share/java/postgresql.jar /usr/share/logstash/logstash-core/lib/jars
