@@ -24,9 +24,6 @@ sudo apt-get install elasticsearch
 sudo bash -c "echo 'sudo systemctl start elasticsearch.service' >> /usr/local/bin/StartElasticSearch.sh"
 sudo bash -c "echo 'sudo systemctl stop elasticsearch.service' >> /usr/local/bin/StopElasticSearch.sh"
 sudo chmod a+x /usr/local/bin/*ElasticSearch.sh
-sudo bash -c "echo 'StartElasticSearch.sh' > /usr/local/bin/StartELK.sh"
-sudo bash -c "echo 'StopElasticSearch.sh' > /usr/local/bin/StopELK.sh"
-sudo chmod a+x /usr/local/bin/*ELK.sh
 echo "## cloning and installing german dictionary ##'
 cd $HOME/Downloads
 git clone https://github.com/uschindler/german-decompounder.git
