@@ -13,6 +13,10 @@ sudo su - postgres -c "psql -c \"CREATE DATABASE onlineshop\""
 sudo su - postgres -c "psql -c \"CREATE USER onlineshop WITH ENCRYPTED PASSWORD 'geheim'\""
 sudo su - postgres -c "psql -c \"GRANT ALL PRIVILEGES ON DATABASE onlineshop to onlineshop\""
 
+sudo bash -c "echo 'sudo systemctl start postgresql' >> /usr/local/bin/StartPostgres.sh"
+sudo bash -c "echo 'sudo systemctl stop postgresql' >> /usr/local/bin/StopPostgres.sh"
+sudo chmod a+x /usr/local/bin/*Postgres.sh
+
 # install this, if you work with PHP and Apache
 # sudo apt-get -y -qq install php-pgsql
 # sudo systemctl restart apache2
