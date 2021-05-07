@@ -20,7 +20,7 @@ sudo apt-get install elasticsearch
 # cluster.name: myShopCluster1
 # node.name: "myShopNode1"
 
-sudo /bin/systemctl enable elasticsearch.service
+# sudo /bin/systemctl enable elasticsearch.service
 sudo bash -c "echo 'sudo systemctl start elasticsearch.service' >> /usr/local/bin/StartElasticSearch.sh"
 sudo bash -c "echo 'sudo systemctl stop elasticsearch.service' >> /usr/local/bin/StopElasticSearch.sh"
 sudo chmod a+x /usr/local/bin/*ElasticSearch.sh
