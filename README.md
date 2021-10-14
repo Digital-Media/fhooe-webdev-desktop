@@ -8,6 +8,7 @@ For Troubleshooting and Basics of Virtualisation see [Vagrant Installation](http
 
 * Download ZIP file
 * unzip to Virtual Machines directory
+* Starting with Windows Version 21H1 Hyper-V can run parallel to VMware. If Hyper-V is enabled see [Article to avoid performance degradation](https://kb.vmware.com/s/article/79832)
 * Start VMWare
 * Choose \*.vmx file
 * Start virtual machine
